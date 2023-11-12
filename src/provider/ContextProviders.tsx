@@ -22,6 +22,7 @@ export const UserIdContext = createContext<NumberContextType>(
 );
 
 export const ContextProviders: FC<Props> = ({ children }) => {
+  //ユーザーIDを保持するステート
   const [id, setId] = useState(0);
   return (
     <UserIdContext.Provider value={[id, setId]}>
