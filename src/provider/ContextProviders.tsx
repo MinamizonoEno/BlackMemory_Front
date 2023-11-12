@@ -16,6 +16,16 @@ type BooleanContextType = [
   setState: React.Dispatch<React.SetStateAction<boolean>>,
 ];
 
+//ユーザIDを保持するコンテキスト
+export const UserIdContext = createContext<NumberContextType>(
+  {} as NumberContextType
+);
+
 export const ContextProviders: FC<Props> = ({ children }) => {
-  return { children };
+  const [id, setId] = useState(0);
+  return (
+    <UserIdContext.Provider value={[id, setId]}>
+      {children}
+    </UserIdContext.Provider>
+  );
 };
