@@ -1,31 +1,18 @@
 import axios from "axios";
 import { useContext } from "react";
-import {
-  UserIdContext,
-  DateContext,
-  StartAtContext,
-  EndAtContext,
-  HoursContext,
-  ContentContext,
-} from "../../provider/ContextProviders";
+import { UserIdContext } from "../../provider/ContextProviders";
 
-const url = "";
-
-export const PostApi = () => {
+export const PostApi = (/*Props*/) => {
+  const url = "";
   const [id] = useContext(UserIdContext);
-  const [date] = useContext(DateContext);
-  const [startAt] = useContext(StartAtContext);
-  const [endAt] = useContext(EndAtContext);
-  const [hours] = useContext(HoursContext);
-  const [content] = useContext(ContentContext);
 
   const postData = {
     id: `${id}`,
-    date: `${date}`,
+    /*date: `${date}`,
     start_at: `${startAt}`,
     end_at: `${endAt}`,
     hours: `${hours}`,
-    content: `${content}`,
+    content: `${content}`,*/
   };
 
   axios
