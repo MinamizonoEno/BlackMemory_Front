@@ -1,3 +1,10 @@
+import { Providers } from "./provider/Provider";
+import { Routers } from "./routes/Routers";
+
 export const App = () => {
-  return <>init</>;
+  return (
+    <Providers>
+      <Routers />
+    </Providers>
+  );
 };
