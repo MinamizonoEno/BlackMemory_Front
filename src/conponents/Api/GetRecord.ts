@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const GetRecord = () => {
-  const url = "";
+  const url = "http://localhost:8080/csrf";
   axios
     .get(url)
     .then(function (response) {
