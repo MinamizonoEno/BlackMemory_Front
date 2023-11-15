@@ -18,7 +18,7 @@ type NumberContextType = [
 
 //ユーザIDを保持するコンテキスト
 export const UserIdContext = createContext<NumberContextType>(
-  {} as NumberContextType
+  {} as NumberContextType,
 );
 
 export const ContextProviders: FC<Props> = ({ children }) => {
