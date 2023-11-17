@@ -69,8 +69,6 @@ export const LoginForm = () => {
     e.preventDefault();
     if (isFormValid) {
       //ここに書いてね
-      console.log("Form User ID Data:", formUserEMailData);
-      console.log("Form User Password Data:", formUserPasswordData);
       PostLogin(formUserEMailData, formUserPasswordData, "login");
     } else {
       handleModalOpen();

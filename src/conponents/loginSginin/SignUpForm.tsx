@@ -85,9 +85,7 @@ export const SignUpForm = () => {
     e.preventDefault();
     if (isFormValid) {
       //ここに書いてね
-      console.log("Form User Name Data:", formUserNameData);
-      console.log("Form User ID Data:", formUserEMailData);
-      console.log("Form User Password Data:", formUserPasswordData);
+
       PostSignup(
         formUserNameData,
         formUserEMailData,

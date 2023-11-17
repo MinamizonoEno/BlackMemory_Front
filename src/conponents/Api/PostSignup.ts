@@ -11,7 +11,6 @@ export const PostSignup = (
   const url = `https://blackmemoryapi.onrender.com/${endpoint}`;
   //const [id] = useContext(UserIdContext);
 
-  console.log(email);
   const postData = {
     //id: `${id}`,
     name: name,
