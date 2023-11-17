@@ -47,7 +47,7 @@ export const WorkCondMismatchPage = () => {
             また、賃金の差異がある場合はそれが分かる書類や、労働条件の違いであれば日々の労働時間などを記録して提出する必要があります。
           </Typography>
           <Typography sx={styles.sectionHeader}>
-            よく見受けられる条件の相違とは
+            1. よく見受けられる条件の相違とは
           </Typography>
           <Typography sx={styles.listItem}>
             求人票に掲載された労働条件と実際の労働条件が異なる場合、以下はよくあるケースです。
@@ -67,7 +67,7 @@ export const WorkCondMismatchPage = () => {
           </Typography>
 
           <Typography sx={styles.sectionHeader}>
-            労働基準法に違反する深刻な相違とは
+            2. 労働基準法に違反する深刻な相違とは
           </Typography>
           <Typography sx={styles.listItem}>
             求人票における「見込み」とは異なり、「労働条件の明示」内容と実際の労働条件が一致しない場合、労働者は明示された条件通りに要求する権利があります。
@@ -80,7 +80,7 @@ export const WorkCondMismatchPage = () => {
           </Typography>
 
           <Typography sx={styles.sectionHeader}>
-            入社時の「労働条件の明示」が重要な要点
+            3. 入社時の「労働条件の明示」が重要な要点
           </Typography>
           <Typography sx={styles.listItem}>
             求人票は広く配布されますが、「雇用契約書」や「労働条件通知書」は具体的に明示される重要な書類です。
@@ -101,7 +101,7 @@ export const WorkCondMismatchPage = () => {
           </List>
 
           <Typography sx={styles.sectionHeader}>
-            ケース別トラブルに対処する方法
+            4. ケース別トラブルに対処する方法
           </Typography>
           <Typography sx={styles.listItem}>
             <Typography component="span" sx={{ fontWeight: "bold" }}>
