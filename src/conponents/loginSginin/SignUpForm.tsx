@@ -10,6 +10,7 @@ import {
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
+import { PostSignup } from "../Api/PostSignup";
 
 export const SignUpForm = () => {
   const [formUserNameData, setUserNameData] = useState("");
@@ -87,6 +88,12 @@ export const SignUpForm = () => {
       console.log("Form User Name Data:", formUserNameData);
       console.log("Form User ID Data:", formUserEMailData);
       console.log("Form User Password Data:", formUserPasswordData);
+      PostSignup(
+        formUserNameData,
+        formUserEMailData,
+        formUserPasswordData,
+        "signup"
+      );
     } else {
       handleModalOpen();
     }

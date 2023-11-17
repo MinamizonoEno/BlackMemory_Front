@@ -10,6 +10,7 @@ import {
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
+import { PostLogin } from "../Api/PostLogin";
 
 export const LoginForm = () => {
   const [formUserEMailData, setUserEMailData] = useState("");
@@ -70,6 +71,7 @@ export const LoginForm = () => {
       //ここに書いてね
       console.log("Form User ID Data:", formUserEMailData);
       console.log("Form User Password Data:", formUserPasswordData);
+      PostLogin(formUserEMailData, formUserPasswordData, "login");
     } else {
       handleModalOpen();
     }

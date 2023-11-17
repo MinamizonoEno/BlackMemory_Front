@@ -2,14 +2,21 @@ import axios from "axios";
 //import { useContext } from "react";
 //import { UserIdContext } from "../../provider/ContextProviders";
 
-export const PostRecord = (/*Props*/) => {
-  const url = "http://localhost:8080/logout";
+export const PostSignup = (
+  name: string,
+  email: string,
+  password: string,
+  endpoint: string
+) => {
+  const url = `https://blackmemoryapi.onrender.com/${endpoint}`;
   //const [id] = useContext(UserIdContext);
 
+  console.log(email);
   const postData = {
     //id: `${id}`,
-    email: "ddd@bbbb.com",
-    password: "password",
+    name: name,
+    email: email,
+    password: password,
     /*date: `${date}`,
     start_at: `${startAt}`,
     end_at: `${endAt}`,
