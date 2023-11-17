@@ -3,23 +3,23 @@ import axios from "axios";
 //import { UserIdContext } from "../../provider/ContextProviders";
 
 export const PostRecord = (/*Props*/) => {
-  const url = "http://localhost:8080/signup";
+  const url = "http://localhost:8080/logout";
   //const [id] = useContext(UserIdContext);
 
   const postData = {
     //id: `${id}`,
-    email: "cccc@bbbb.com",
+    email: "ddd@bbbb.com",
     password: "password",
     /*date: `${date}`,
     start_at: `${startAt}`,
     end_at: `${endAt}`,
     hours: `${hours}`,
     content: `${content}`,*/
-    /*date: "20231112",
-    start_at: "0821",
-    end_at: "2130",
-    hours: "1309",
-    content: "新年のあいさつ",*/
+    // date: "20231112",
+    // start_at: "0821",
+    // end_at: "2130",
+    // hours: "1309",
+    // content: "新年のあいさつ",
   };
 
   axios
