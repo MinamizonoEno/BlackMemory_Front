@@ -2,21 +2,16 @@ import axios from "axios";
 //import { useContext } from "react";
 //import { UserIdContext } from "../../provider/ContextProviders";
 
-export const PostLogin = (
-  email: string,
-  password: string,
-  endpoint: string
-) => {
-  const url = `https://blackmemoryapi.onrender.com/${endpoint}`;
+export const PostWorks = () => {
+  const url = `https://blackmemoryapi.onrender.com/works`;
 
   const postData = {
-    email: email,
-    password: password,
-    // date: "20231112",
-    // start_at: "0821",
-    // end_at: "2130",
-    // hours: "1309",
-    // content: "新年のあいさつ",
+    id: "30",
+    date: "20231112",
+    start_at: "0821",
+    end_at: "2130",
+    hours: "1309",
+    content: "新年のあいさつ",
   };
 
   axios
