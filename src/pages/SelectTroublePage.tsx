@@ -1,7 +1,9 @@
 import { Box, Grid, Button, Typography } from "@mui/material";
 import { MainPageLayout } from "../style/MainPageLayout";
+import { useNavigate } from "react-router-dom";
 
 export const SelectTroublePage = () => {
+  const navigate = useNavigate();
   return (
     <>
       <MainPageLayout>
@@ -44,6 +46,9 @@ export const SelectTroublePage = () => {
                     padding: "10px",
                     paddingLeft: "5%",
                     position: "relative",
+                  }}
+                  onClick={() => {
+                    navigate("/SelectWorkTrouble");
                   }}
                 >
                   <Typography
