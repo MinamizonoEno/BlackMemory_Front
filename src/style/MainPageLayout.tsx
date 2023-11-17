@@ -13,6 +13,7 @@ import { FC } from "react";
 import { useContext } from "react";
 import { UserNameContext } from "../provider/ContextProviders";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   children: React.ReactNode;
@@ -20,7 +21,7 @@ type Props = {
 
 export const MainPageLayout: FC<Props> = ({ children }) => {
   const [userName] = useContext(UserNameContext);
-
+  const navigate = useNavigate();
   return (
     <>
       <AppBar
@@ -84,6 +85,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
                     }}
+                    onClick={() => {
+                      navigate("/WorkCondMismatch");
+                    }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
                       労働条件が労働条件通知書などと異なる
@@ -95,6 +99,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingTop: "3%",
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
+                    }}
+                    onClick={() => {
+                      navigate("/ExcessiveOvertime");
                     }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
@@ -108,6 +115,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
                     }}
+                    onClick={() => {
+                      navigate("/NoDesignatedHolidays");
+                    }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
                       所定の休日が存在しない
@@ -119,6 +129,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingTop: "3%",
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
+                    }}
+                    onClick={() => {
+                      navigate("/NoBreaksExceeding");
                     }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
@@ -156,6 +169,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
                     }}
+                    onClick={() => {
+                      navigate("/NoPaymentReceived");
+                    }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
                       賃金や残業代を支払ってもらえない
@@ -167,6 +183,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingTop: "3%",
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
+                    }}
+                    onClick={() => {
+                      navigate("/UnpaidDismissalAllowance");
                     }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
@@ -180,6 +199,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
                     }}
+                    onClick={() => {
+                      navigate("/BelowMinimumWage");
+                    }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>
                       最低賃金を下回っている
@@ -191,6 +213,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                       paddingTop: "3%",
                       paddingBottom: "3%",
                       backgroundColor: "#424057",
+                    }}
+                    onClick={() => {
+                      navigate("/WorkplaceInjuryCoverUp");
                     }}
                   >
                     <Typography sx={{ color: "#fff", fontSize: "1.2rem" }}>

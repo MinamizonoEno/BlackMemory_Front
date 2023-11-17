@@ -98,6 +98,9 @@ export const SelectTroublePage = () => {
                     paddingLeft: "5%",
                     position: "relative",
                   }}
+                  onClick={() => {
+                    navigate("/SelectWageAndWorkerComp");
+                  }}
                 >
                   <Typography
                     sx={{

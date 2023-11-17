@@ -9,6 +9,11 @@ import { WorkCondMismatchPage } from "../pages/workTrouble/WorkCondMismatchPage"
 import { NoBreaksExceedingPage } from "../pages/workTrouble/NoBreaksExceedingPage";
 import { ExcessiveOvertimePage } from "../pages/workTrouble/ExcessiveOvertimePage";
 import { NoDesignatedHolidaysPages } from "../pages/workTrouble/NoDesignatedHolidaysPages";
+import { SelectWageAndWorkersCompPage } from "../pages/SelectWageAndWorkersCompPage";
+import { WorkplaceInjuryCoverUpPage } from "../pages/workersComp/WorkplaceInjuryCoverUpPage";
+import { UnpaidDismissalAllowancePage } from "../pages/workersComp/UnpaidDismissalAllowancePage";
+import { NoPaymentReceivedPage } from "../pages/workersComp/NoPaymentReceivedPage";
+import { BelowMinimumWagePage } from "../pages/workersComp/BelowMinimumWagePage";
 
 export const Routers = () => {
   const [loginState] = useContext(LoginStateContext);
@@ -39,6 +44,26 @@ export const Routers = () => {
             <Route
               path="/NoDesignatedHolidays"
               element={<NoDesignatedHolidaysPages />}
+            />
+            <Route
+              path="/SelectWageAndWorkerComp"
+              element={<SelectWageAndWorkersCompPage />}
+            />
+            <Route
+              path="/WorkplaceInjuryCoverUp"
+              element={<WorkplaceInjuryCoverUpPage />}
+            />
+            <Route
+              path="/UnpaidDismissalAllowance"
+              element={<UnpaidDismissalAllowancePage />}
+            />
+            <Route
+              path="/NoPaymentReceived"
+              element={<NoPaymentReceivedPage />}
+            />
+            <Route
+              path="/BelowMinimumWage"
+              element={<BelowMinimumWagePage />}
             />
           </>
         ) : (
