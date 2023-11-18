@@ -1,6 +1,7 @@
 import axios from "axios";
 //import { useContext } from "react";
 //import { UserIdContext } from "../../provider/ContextProviders";
+import { GetRecord } from "../Api/GetRecord";
 
 export const PostSignup = (
   name: string,
@@ -9,7 +10,7 @@ export const PostSignup = (
   endpoint: string
 ) => {
   const url = `https://blackmemoryapi.onrender.com/${endpoint}`;
-
+  GetRecord();
   const postData = {
     name: name,
     email: email,
@@ -22,7 +23,10 @@ export const PostSignup = (
   };
 
   axios
-    .post(url, Object.assign({}, postData), { withCredentials: true })
+    .post(url, Object.assign({}, postData), {
+      headers: { "X-CSRF-TOKEN": `${document.cookie}` },
+      withCredentials: true,
+    })
     .then(function (response) {
       console.log(response);
     })

@@ -11,6 +11,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { useNavigate } from "react-router-dom";
 import { PostSignup } from "../Api/PostSignup";
+import { GetRecord } from "../Api/GetRecord";
 
 export const SignUpForm = () => {
   const [formUserNameData, setUserNameData] = useState("");
@@ -85,7 +86,7 @@ export const SignUpForm = () => {
     e.preventDefault();
     if (isFormValid) {
       //ここに書いてね
-
+      GetRecord();
       PostSignup(
         formUserNameData,
         formUserEMailData,
