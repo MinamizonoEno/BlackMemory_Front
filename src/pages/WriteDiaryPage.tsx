@@ -39,7 +39,7 @@ export const WriteDiaryPage = () => {
               backgroundColor: "#343240",
             }}
           >
-            <Box sx={{ width: "100%", height: "100%" }}></Box>
+            <Box sx={{ width: "100%", height: "100%" }} />
           </Grid>
           <Grid
             item
