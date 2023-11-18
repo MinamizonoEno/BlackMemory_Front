@@ -14,6 +14,8 @@ import { WorkplaceInjuryCoverUpPage } from "../pages/workersComp/WorkplaceInjury
 import { UnpaidDismissalAllowancePage } from "../pages/workersComp/UnpaidDismissalAllowancePage";
 import { NoPaymentReceivedPage } from "../pages/workersComp/NoPaymentReceivedPage";
 import { BelowMinimumWagePage } from "../pages/workersComp/BelowMinimumWagePage";
+import { WriteDiaryPage } from "../pages/WriteDiaryPage";
+import { PostMemoryPage } from "../pages/PostMemoryPage";
 
 export const Routers = () => {
   const [loginState] = useContext(LoginStateContext);
@@ -33,6 +35,8 @@ export const Routers = () => {
               path="/WorkCondMismatch"
               element={<WorkCondMismatchPage />}
             />
+            <Route path="/WriteDiary" element={<WriteDiaryPage />} />
+            <Route path="/PostMemory" element={<PostMemoryPage />} />
             <Route
               path="/NoBreaksExceeding"
               element={<NoBreaksExceedingPage />}

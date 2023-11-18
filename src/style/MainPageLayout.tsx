@@ -60,6 +60,9 @@ export const MainPageLayout: FC<Props> = ({ children }) => {
                   marginBottom: "3%",
                   borderBottom: "1px solid #424057",
                 }}
+                onClick={() => {
+                  navigate("/WriteDiary");
+                }}
               >
                 <Typography sx={{ color: "#fff", fontSize: "1.4rem" }}>
                   今日の日記を書く
